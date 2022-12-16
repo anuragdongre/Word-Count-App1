@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Count App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="heading">Word Count App</h1>
+  <form>
+    <label class="text">Enter text:</label><br>
+    <textarea id="text"></textarea><br>
+    <button type="button" onclick="countCharacters()">Count Characters</button>
+  </form>
+  <p>Number of characters: <span id="result">0</span></p>
+  <script>
+    function countCharacters() {
+      // get the text from the textarea
+      let text = document.getElementById('text').value;
+      // count the number of characters in the text
+      let count = text.length;
+      // display the result
+      document.getElementById('result').innerHTML = count;
+    }
+  </script>
+</body>
+</html>
